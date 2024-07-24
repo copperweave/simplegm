@@ -1,9 +1,10 @@
+import SpellCard from "@/components/spellCard";
+
 export default function Home() {
+  
   return (
     <main>
-      <h1>
-        Simple GM
-      </h1>
+      <SpellCard bannerColor="bg-green-700"/>
     </main>
   );
 }

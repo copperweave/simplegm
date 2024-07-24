@@ -15,3 +15,13 @@
 body {
   @apply font-sans;
 }
+
+.spell-card {
+  width: 2.5in;
+  height:3.5in;
+  border: 1px black solid;
+}
+
+.text-outline {
+  text-shadow: -0.7px -0.7px black,0.7px -0.7px black,-0.7px 0.7px black,0.7px 0.7px black;
+}
