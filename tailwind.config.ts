@@ -15,6 +15,9 @@ const config: Config = {
       }
     },
   },
+  safelist: [
+    { pattern: /^bg-(red|orange|blue|lime|slate)-600$/ },
+  ],
   plugins: [],
 };
 export default config;
