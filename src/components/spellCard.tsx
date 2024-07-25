@@ -17,13 +17,24 @@ export default function SpellCard(props: SpellCardProps){
             <span className="title-section flex-grow">
                 {props.title}
             </span>
-            <PathfinderAction className="flex-shrink-0" />
+            <PathfinderAction className="flex-shrink-0">
+                {props.actions || ""}
+            </PathfinderAction>
         </h1>
         <div className="flex p-1 flex-row flex-wrap gap-px">
             {props.tags?.map(tag => (
                 <PathfinderTag key={tag}>{tag}</PathfinderTag>
             ))}
         </div>
+        {props.usage && 
+            <div className="px-1">
+                {Object.keys(props.usage || {}).map(key => (
+                    <div key={key} className="text-xs">
+                        <b>{key}:</b> {props.usage?.[key]}
+                    </div>
+                ))}
+            </div>
+        }
         <p className="text-xs leading-normal p-1">
             {props.text}
         </p>
